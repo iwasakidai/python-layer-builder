@@ -1,0 +1,2 @@
+# python-layer-builder
+AmazonlinuxをベースにしてLambdaのレイヤーを作成できる環境

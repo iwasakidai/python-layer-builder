@@ -4,7 +4,7 @@ FROM amazonlinux:latest
 # 必要なツールのインストール
 RUN yum update -y
 RUN yum install -y shadow-utils bash sudo git zip \
-                  python python3-pip
+                  python3.12 python3.12-pip
 
 # aws-cli のインストール
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"

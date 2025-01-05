@@ -22,7 +22,7 @@ jobs:
       - name: download modules and zipped
         run: |
           pip install -r requirements.txt -t python
-          zip -r output/layer python/
+          mkdir output && zip -r output/layer python/
           ls
           ls output
         

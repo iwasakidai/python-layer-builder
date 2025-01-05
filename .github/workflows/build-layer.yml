@@ -22,7 +22,9 @@ jobs:
       - name: download modules and zipped
         run: |
           pip install -r requirements.txt -t python
-          zip -r layer python/
+          zip -r output/layer python/
+          ls
+          ls output
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3

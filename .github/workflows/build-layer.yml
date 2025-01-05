@@ -1,9 +1,11 @@
 name: Build lambda layer
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - run: echo "hello actions world!"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello world
+        run: echo "hello actions world!"

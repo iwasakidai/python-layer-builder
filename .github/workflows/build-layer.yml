@@ -10,17 +10,20 @@ jobs:
       - name: hello world
         run: echo "hello actions world!"
 
+      - name: checkout
+        uses: actions/checkout@v4
       - name: setup python
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+        uses: actions/setup-python@v5
         with:
           python-version: '3.13' 
-      - run: python --version
+      - name: invoke python
+        run: python --version
       
       - name: download modules and zipped
-      - run: |
-              pip install -r requirements.txt -t python
-              zip -r layer python/
+        run: |
+          pip install -r requirements.txt -t python
+          zip -r layer python/
+        
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:

@@ -11,8 +11,8 @@ jobs:
         run: echo "hello actions world!"
     steps:
       - name: setup python
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+        uses: actions/checkout@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.13' 
-      - run: python --version
+        run: python --version
